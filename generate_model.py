@@ -1,5 +1,6 @@
 types = {'integer': 'int?',
          'bigint': 'long?',
+         'smallint': 'byte?',
          'text': 'string',
          'timestamp': 'DateTime?',
          'boolean': 'bool?',
