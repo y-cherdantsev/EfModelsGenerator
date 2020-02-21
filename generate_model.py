@@ -70,6 +70,7 @@ def main():
     template = template.replace('$CONTAINER', container)
     file = open(modify_to_camel(table_name) + ".cs", 'w', encoding='utf-8')
     file.write(template)
+    print("Model successfully created and wrote to file \'" + modify_to_camel(table_name) + ".cs\'")
 
 
 def modify_to_camel(text):
