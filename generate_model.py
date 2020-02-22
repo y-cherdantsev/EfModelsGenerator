@@ -1,10 +1,17 @@
 types = {'integer': 'int?',
          'bigint': 'long?',
-         'smallint': 'byte?',
+         'smallint': 'int?',
          'text': 'string',
          'timestamp': 'DateTime?',
+         'date': 'DateTime?',
          'boolean': 'bool?',
+         'numeric': 'double?',
          'double precision': 'double?',
+         'real': 'double?',
+         'decimal': 'double?',
+         'bigserial': 'long?',
+         'serial': 'int?',
+         'smallserial': 'int?',
          'unknown': 'UnknownType'}
 
 
