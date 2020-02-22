@@ -36,6 +36,7 @@ def main():
         .replace('\n', '') \
         .replace('create', '') \
         .replace('table', '') \
+        .replace('-- auto-generated definition', '') \
         .replace(' ', '') \
         .split('.')
     table_name = pre_table_name[len(pre_table_name) - 1]  # Ready
