@@ -50,6 +50,7 @@ def main():
     table_name = pre_table_name[len(pre_table_name) - 1]  # Ready
 
     # fields_parsing
+    //TODO(numeric(1, 2) parse error)
     inner_fields = text[text.index('(') + 1:text.index(');')].replace('\n', '').split(',')
     class_fields = []
     for inner_field in inner_fields:
