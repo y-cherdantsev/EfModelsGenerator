@@ -1,7 +1,8 @@
 types = {'integer': 'int?',
          'bigint': 'long?',
          'smallint': 'int?',
-         'text': 'string',
+         'varchar': 'string',
+	 'text': 'string',
          'timestamp': 'DateTime?',
          'date': 'DateTime?',
          'boolean': 'bool?',
@@ -49,7 +50,7 @@ def main():
     table_name = pre_table_name[len(pre_table_name) - 1]  # Ready
 
     # fields_parsing
-    inner_fields = text[text.index('(') + 1:text.index(')')].replace('\n', '').split(',')
+    inner_fields = text[text.index('(') + 1:text.index(');')].replace('\n', '').split(',')
     class_fields = []
     for inner_field in inner_fields:
         inner_field = inner_field.strip()
