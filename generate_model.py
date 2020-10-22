@@ -33,7 +33,7 @@ def main():
                '\t[Table("$TABLE_NAME")]\n' \
                '\tpublic class $CLASS_NAME\n' \
                '\t{\n' \
-               '$CONTAINER\n' \
+               '$CONTAINER' \
                '\t}\n' \
                '}\n'
 
@@ -70,15 +70,16 @@ def main():
     # generating result
     template = template.replace('$TABLE_NAME', table_name)
     template = template.replace('$CLASS_NAME', modify_to_camel(table_name))
-    container = '\t\t'
+    container = ''
     for class_field in class_fields:
+        container += '\t\t'
         if class_field.key:
             container += '[Key] '
         container += '[Column(\"' + class_field.name + '\")] public ' \
                      + types[class_field.type] \
                      + ' ' \
                      + modify_to_camel(class_field.name) \
-                     + '{get; set;}\n\t\t'
+                     + '{get; set;}\n'
     template = template.replace('$CONTAINER', container)
     file = open(modify_to_camel(table_name) + ".cs", 'w', encoding='utf-8')
     file.write(template)
