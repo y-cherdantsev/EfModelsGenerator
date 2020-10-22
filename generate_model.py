@@ -35,7 +35,7 @@ def main():
                '\t{\n' \
                '$CONTAINER' \
                '\t}\n' \
-               '}\n'
+               '}'
 
     import sys
     file = open(sys.argv[1], 'r', encoding='utf-8')
