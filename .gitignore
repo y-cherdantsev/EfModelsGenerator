@@ -1,3 +1,6 @@
-.idea 
-proceed.sql 
-venv 
+*
+
+!.gitignore
+!generate_model.py
+!README.md
+!sql_example.sql
