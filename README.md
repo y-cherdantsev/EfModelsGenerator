@@ -1,15 +1,15 @@
 # Entity Framework Models Generator
 
 ## Details
-Скрипт использует файл с sql кодом создания таблицы и преобразует его в модель для .NET Entity Framework
+Script uses sql file with table creation code and transforms it into .NET Entity Framework model
 ##### Python v3.8.1
 ## Usage
 
-Для начала нужно запустить скрипт указав в качестве аргумента файл для преобразования:
+First of all you need to start script with sql file path as an argument:
 ```
 user@DESKTOP-JEJGU1J~: python generate_model.py sql_example.sql
 ```
-После этого в папке со скриптом появится файл с расширением ***.cs*** и названием сгенерированным из названия таблицы. Этот файл и есть сгенерированная модель для фреймворка
+After that in a script folder file with ***.cs*** extension will appear with file name as a table title. This file will be a model for the framework.
 
 ## Authors
 * **Евгений Черданцев** - *Initial work* - [ZhekaCher](https://github.com/ZhekaCher)
